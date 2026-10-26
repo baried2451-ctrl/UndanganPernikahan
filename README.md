@@ -4,7 +4,7 @@ Undangan pernikahan digital bertema Jawa, dibuat untuk **Tugas Mandiri mata kuli
 Website ini memadukan motif batik (kawung, truntum, parang), siluet gunungan wayang,
 dan pita tumpal dengan palet hijau lumut, maroon, emas, dan gading.
 
-**Demo:** https://undangan-jawa.vercel.app
+**Demo:** https://undanganpernikahan-baried.vercel.app/
 
 ## Fitur
 
