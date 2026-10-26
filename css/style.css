@@ -1,0 +1,225 @@
+:root{
+--sogan:#2A1A12; --lumut:#1D2B24; --maroon:#6B1F2A;
+--emas:#D1A84B; --gading:#EEE5D0; --pasir:#E6D9BC; --tinta:#2B2118; --muted:#6b5d45;
+--kawung:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%23D1A84B' stroke-opacity='.28'%3E%3Cellipse cx='30' cy='15' rx='9' ry='15'/%3E%3Cellipse cx='30' cy='45' rx='9' ry='15'/%3E%3Cellipse cx='15' cy='30' rx='15' ry='9'/%3E%3Cellipse cx='45' cy='30' rx='15' ry='9'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;color:var(--tinta);background:var(--gading);font-family:"Lora",serif;line-height:1.75}
+body.locked{overflow:hidden}
+h1,h2,h3,.navbar-brand{font-family:"Marcellus",serif;font-weight:400}
+:focus-visible{outline:3px solid var(--emas);outline-offset:3px}
+
+.section-pad{padding:95px 0}
+.narrow{max-width:700px}
+.section-title{font-size:clamp(1.9rem,4.5vw,2.8rem);margin-bottom:22px;color:var(--maroon)}
+.body-copy{color:var(--muted)}
+.small{color:var(--muted)}
+
+/* tombol */
+.btn-gold{background:var(--emas);color:var(--sogan);border:0;border-radius:0;padding:11px 26px;font-family:"Marcellus",serif;letter-spacing:.04em;transition:background .25s}
+.btn-gold:hover,.btn-gold:focus-visible{background:#E2BD62;color:var(--sogan)}
+.btn-outline-gold{color:var(--maroon);border:1px solid var(--maroon);border-radius:0}
+.btn-outline-gold:hover{background:var(--maroon);color:var(--gading)}
+
+/* ornamen: belah ketupat + garis */
+.ornamen{position:relative;width:200px;height:28px;margin:0 auto 1.5rem;
+background:linear-gradient(var(--emas),var(--emas)) left center/80px 1px no-repeat,linear-gradient(var(--emas),var(--emas)) right center/80px 1px no-repeat}
+.ornamen::after{content:"";position:absolute;left:50%;top:50%;width:14px;height:14px;background:var(--maroon);outline:1px solid var(--emas);outline-offset:3px;transform:translate(-50%,-50%) rotate(45deg)}
+
+/* COVER */
+.opening{position:fixed;inset:0;z-index:2000;display:grid;place-items:center;padding:25px;color:var(--gading);
+background:var(--sogan) var(--kawung);transition:transform 1s ease,opacity 1s ease,visibility 1s}
+.opening.closed{transform:translateY(-100%);opacity:0;visibility:hidden;pointer-events:none}
+.opening-card{width:100%;max-width:520px;text-align:center;padding:45px 25px;border:1px solid var(--emas);outline:1px solid var(--emas);outline-offset:7px;background:#2a1a12d9}
+.gunungan{width:84px;height:120px;margin:0 auto 1.5rem;background:var(--emas);
+clip-path:polygon(50% 0,60% 18%,72% 30%,66% 46%,86% 62%,80% 82%,100% 100%,0 100%,20% 82%,14% 62%,34% 46%,28% 30%,40% 18%)}
+.opening-card h1{font-size:clamp(3rem,10vw,4.8rem);color:var(--emas);margin:6px 0}
+.opening-card h1 span,.hero h1 span,.footer h2 span,.navbar-brand span{font-family:"Lora",serif;font-style:italic;color:var(--gading);font-size:.6em}
+.opening-date{margin:16px 0}
+.guest-name{font-family:"Marcellus",serif;font-size:1.6rem;color:var(--emas);margin-bottom:22px}
+.opening .small{color:var(--gading)}
+
+/* NAVBAR */
+.wedding-nav{background:#1d2b24ee;backdrop-filter:blur(10px);border-bottom:1px solid #d1a84b55;padding:9px 0}
+.navbar-brand{color:var(--emas)!important;font-size:1.6rem}
+.nav-link{color:var(--gading)!important;margin-left:12px;font-size:.92rem}
+.nav-link:hover{color:var(--emas)!important}
+
+/* HERO */
+.hero{min-height:100vh;display:grid;place-items:center;color:var(--gading);background:var(--lumut) var(--kawung)}
+.hero-content{padding-top:45px}
+.jawa-greet{font-family:"Marcellus",serif;font-size:1.4rem;color:var(--emas)}
+.hero h1{font-size:clamp(3.6rem,11vw,7rem);color:var(--emas);margin:8px 0 18px;line-height:1.1}
+.hero-subtitle{font-style:italic}
+body.dibuka .hero-seq>*{animation:muncul .9s ease both}
+body.dibuka .hero-seq>*:nth-child(2){animation-delay:.25s}
+body.dibuka .hero-seq>*:nth-child(3){animation-delay:.5s}
+body.dibuka .hero-seq>*:nth-child(4){animation-delay:.75s}
+body.dibuka .hero-seq>*:nth-child(5){animation-delay:1s}
+@keyframes muncul{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* MUSIK */
+.music-toggle{position:fixed;z-index:1500;right:20px;bottom:20px;width:48px;height:48px;border-radius:50%;border:2px solid var(--emas);background:var(--sogan);color:var(--emas);font-size:1.2rem}
+.music-toggle.playing{animation:putar 4s linear infinite}
+@keyframes putar{to{transform:rotate(360deg)}}
+
+/* INTRO & MEMPELAI */
+.intro{background:var(--gading)}
+.arabic{color:var(--maroon);font-size:1.7rem;line-height:2;margin-top:28px}
+.couple{background:var(--pasir) var(--kawung)}
+.person-card{padding:18px}
+.person-photo{width:min(100%,280px);aspect-ratio:4/5;object-fit:cover;border-radius:140px 140px 0 0;border:3px solid var(--emas);box-shadow:0 0 0 6px var(--pasir),0 0 0 7px var(--maroon);margin-bottom:28px}
+.person-card h3{font-size:2rem;color:var(--maroon)}
+.couple-amp{font-size:3rem;color:var(--maroon);font-family:"Lora",serif;font-style:italic}
+
+/* KISAH */
+.story{background:var(--gading)}
+.story-timeline{max-width:560px;margin:45px auto 0;padding-left:28px;border-left:1px solid var(--emas)}
+.story-item{position:relative;padding:0 0 28px}
+.story-item h3{font-size:1.25rem;color:var(--maroon)}
+.timeline-dot{position:absolute;left:-35px;top:7px;width:12px;height:12px;background:var(--maroon);outline:1px solid var(--emas);outline-offset:3px;transform:rotate(45deg)}
+
+/* COUNTDOWN */
+.countdown-section{background:var(--maroon) var(--kawung);color:var(--gading)}
+.countdown-section .section-title{color:var(--emas)}
+.count-box{min-width:88px;padding:17px 12px;border:1px solid var(--emas);color:var(--gading)}
+.count-box strong{display:block;font:400 2.1rem "Marcellus",serif;color:var(--emas)}
+.count-box span{font-size:.8rem;letter-spacing:.06em}
+
+/* ACARA */
+.event{background:var(--pasir) var(--kawung)}
+.event-card{height:100%;padding:38px 24px;background:var(--gading);border:1px solid var(--maroon);box-shadow:6px 6px 0 var(--maroon)}
+.event-icon{display:grid;place-items:center;width:56px;height:56px;margin:0 auto 18px;color:var(--emas);background:var(--lumut);border-radius:50%;font-size:1.5rem}
+.event-card h3{color:var(--maroon);font-size:1.8rem}
+.event-card p{color:var(--muted)}
+.event-date{color:var(--maroon)!important;font-weight:500}
+
+/* ADAT */
+.adat{background:var(--lumut) var(--kawung);color:var(--gading)}
+.adat .section-title{color:var(--emas)}
+.adat-item{height:100%;padding:24px;border-top:3px solid var(--emas);background:#00000026}
+.adat-item h3{color:var(--emas);font-size:1.5rem}
+.adat-item p{margin:0}
+
+/* FORM */
+.rsvp{background:var(--gading)}
+.form-card{background:#fbf7ec;border:1px solid var(--maroon);padding:clamp(24px,5vw,45px);box-shadow:6px 6px 0 var(--emas)}
+.form-label{font-weight:500;color:var(--maroon)}
+.form-control,.form-select{border-color:#8a7a5c;background:#fffdf6;padding:12px 14px;border-radius:0}
+.form-control:focus,.form-select:focus{border-color:var(--maroon);box-shadow:0 0 0 .2rem #6b1f2a22}
+.form-note{color:var(--muted);font-size:.8rem}
+
+/* BUKU TAMU */
+.wishes{background:var(--pasir) var(--kawung)}
+.wish-form{background:var(--gading);padding:25px;border:1px solid var(--maroon)}
+.wish-item{background:#fbf7ec;padding:18px 20px;border-left:3px solid var(--emas);margin-bottom:12px}
+.wish-item strong{font-family:"Marcellus",serif;color:var(--maroon);font-weight:400;font-size:1.1rem}
+.wish-item p{color:var(--muted);margin:8px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* HADIAH & FOOTER */
+.gift{background:var(--gading)}
+.gift-card{max-width:350px;margin:30px auto 0;padding:28px;border:1px solid var(--maroon);background:#fbf7ec;box-shadow:6px 6px 0 var(--maroon)}
+.gift-icon{font-size:2.2rem;color:var(--maroon)}
+.gift-card h3{color:var(--maroon);letter-spacing:.1em}
+.copy-message{min-height:20px;color:var(--maroon);font-size:.85rem;margin:8px 0 0}
+.footer{padding:65px 0 30px;background:var(--sogan) var(--kawung);color:var(--gading)}
+.aksara{font-family:"Noto Sans Javanese",serif;font-size:2.4rem;color:var(--emas)}
+.footer h2{font-size:3rem;color:var(--emas);margin:12px 0 10px}
+.footer-date{color:var(--emas);letter-spacing:.25em;margin:20px 0}
+
+/* toast */
+.toast{border-radius:0;border:1px solid var(--emas)}
+
+@media (max-width:767px){
+.section-pad{padding:70px 0}
+.nav-link{margin-left:0;padding:10px 0}
+.couple-amp{line-height:1}
+.count-box{min-width:70px;padding:13px 8px}
+.count-box strong{font-size:1.7rem}
+.opening-card{padding:35px 18px}
+}
+@media (prefers-reduced-motion:reduce){
+*{animation:none!important;transition:none!important}
+.hero-seq>*{opacity:1;transform:none}
+html{scroll-behavior:auto}
+}
+
+/* =========================================================
+   BACKGROUND BATIK JAWA
+   Kawung, truntum, parang, gunungan, dan tumpal.
+   Blok ini menimpa background lama, jadi letakkan di paling bawah.
+   ========================================================= */
+:root{
+--kawung-s:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60'%3E%3Cg fill='none' stroke='%236B1F2A' stroke-opacity='.15'%3E%3Cellipse cx='30' cy='15' rx='9' ry='15'/%3E%3Cellipse cx='30' cy='45' rx='9' ry='15'/%3E%3Cellipse cx='15' cy='30' rx='15' ry='9'/%3E%3Cellipse cx='45' cy='30' rx='15' ry='9'/%3E%3C/g%3E%3C/svg%3E");
+--truntum:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cg fill='%23D1A84B' fill-opacity='.38'%3E%3Crect x='17' y='17' width='6' height='6' transform='rotate(45 20 20)'/%3E%3Ccircle cx='20' cy='6' r='1.5'/%3E%3Ccircle cx='20' cy='34' r='1.5'/%3E%3Ccircle cx='6' cy='20' r='1.5'/%3E%3Ccircle cx='34' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+--truntum-s:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cg fill='%236B1F2A' fill-opacity='.16'%3E%3Crect x='17' y='17' width='6' height='6' transform='rotate(45 20 20)'/%3E%3Ccircle cx='20' cy='6' r='1.5'/%3E%3Ccircle cx='20' cy='34' r='1.5'/%3E%3Ccircle cx='6' cy='20' r='1.5'/%3E%3Ccircle cx='34' cy='20' r='1.5'/%3E%3C/g%3E%3C/svg%3E");
+--parang:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 40L40 0' stroke='%23D1A84B' stroke-opacity='.35' stroke-width='1.5'/%3E%3Ccircle cx='20' cy='20' r='3.5' fill='%23D1A84B' fill-opacity='.3'/%3E%3C/svg%3E");
+--parang-s:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 40L40 0' stroke='%236B1F2A' stroke-opacity='.18' stroke-width='1.5'/%3E%3Ccircle cx='20' cy='20' r='3.5' fill='%236B1F2A' fill-opacity='.14'/%3E%3C/svg%3E");
+--tumpal:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='16'%3E%3Cpolygon points='0,0 28,0 14,16' fill='%23D1A84B'/%3E%3C/svg%3E");
+--gunungan-poly:polygon(50% 0,60% 18%,72% 30%,66% 46%,86% 62%,80% 82%,100% 100%,0 100%,20% 82%,14% 62%,34% 46%,28% 30%,40% 18%);
+}
+
+/* Cover: sogan dengan cahaya di tengah */
+.opening{background:var(--kawung),radial-gradient(circle at 50% 45%,#4a2e1e 0%,var(--sogan) 55%,#140c08 100%)}
+
+/* Hero: hijau lumut berkabut, siluet gunungan raksasa, pita tumpal di bawah */
+.hero{position:relative;overflow:hidden;
+background:var(--kawung),radial-gradient(circle at 50% 38%,#38564a 0%,var(--lumut) 58%,#0f1712 100%)}
+.hero::before{content:"";position:absolute;left:50%;top:50%;width:min(80vw,520px);aspect-ratio:7/10;
+transform:translate(-50%,-50%);background:var(--emas);opacity:.08;clip-path:var(--gunungan-poly)}
+.hero-content{position:relative;z-index:1}
+
+/* Pita tumpal (segitiga batik) di tepi bawah seksi gelap */
+.hero,.countdown-section,.adat{position:relative}
+.hero::after,.countdown-section::after,.adat::after{content:"";position:absolute;left:0;right:0;bottom:0;height:16px;
+background:var(--tumpal) repeat-x bottom/28px 16px;transform:scaleY(-1)}
+.footer{position:relative}
+.footer::before{content:"";position:absolute;left:0;right:0;top:0;height:16px;background:var(--tumpal) repeat-x top/28px 16px}
+
+/* Seksi terang: tiap seksi punya motif berbeda */
+.intro,.rsvp{background:var(--truntum-s),radial-gradient(circle at 50% 0,#f6efdc,var(--gading) 70%)}
+.story,.gift{background:var(--parang-s),var(--gading)}
+.couple{background:var(--kawung-s),var(--pasir)}
+.event{background:var(--truntum-s),var(--pasir)}
+.wishes{background:var(--parang-s),var(--pasir)}
+
+/* Seksi gelap */
+.countdown-section{background:var(--parang),radial-gradient(circle at 50% 50%,#86303c,var(--maroon) 60%,#46121b 100%)}
+.adat{background:var(--truntum),radial-gradient(circle at 50% 0,#2f4a3d,var(--lumut) 65%,#111a14 100%)}
+.footer{background:var(--kawung),radial-gradient(circle at 50% 30%,#4a2e1e,var(--sogan) 70%)}
+
+/* Kartu putih agar teks tetap terbaca di atas motif */
+.event-card,.form-card,.gift-card,.wish-form{background-color:#fbf7ec}
+
+/* FOTO COVER */
+.cover-photo{
+  display:block;
+  width:170px;
+  height:210px;
+  margin:0 auto 1.5rem;
+  object-fit:cover;
+  object-position:center top;
+  border-radius:85px 85px 0 0;
+  border:3px solid var(--emas);
+  box-shadow:0 0 0 6px var(--sogan),0 0 0 7px var(--emas);
+}
+
+/* BACKGROUND FOTO HERO (SUGENG RAWUH) */
+.hero{
+  background:
+    linear-gradient(rgba(29,43,36,.60), rgba(29,43,36,.88)),
+    url("../assets/foto-cover (2).jpg") center/cover no-repeat var(--lumut);
+}
+.hero::before{display:none;}
+
+/* LOGO BANK */
+.bank-logo{
+  display:block;
+  max-width:140px;
+  max-height:48px;
+  width:auto;
+  height:auto;
+  margin:0 auto 1rem;
+  object-fit:contain;
+}

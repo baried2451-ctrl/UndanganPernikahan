@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Undangan pernikahan digital adat Jawa Alya & Raka">
+<title>Undangan Pernikahan | Raka & Alya</title>
+
+<!-- Bootstrap 5 dan Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Marcellus&family=Noto+Sans+Javanese:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="locked">
+
+<!-- COVER PEMBUKA -->
+<section id="opening" class="opening">
+    <div class="opening-card">
+    <img class="cover-photo" src="assets/foto-cover.jpg" alt="Foto Alya dan Raka" onerror="this.style.display='none'">
+    <p class="mb-1">Pernikahan</p>
+    <h1>Raka <span>&</span> Alya</h1>
+    <p class="opening-date">Minggu, 20 Desember 2026</p>
+    <p class="mb-1 small">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+    <p class="guest-name" id="guestGreeting">Tamu Undangan</p>
+    <button class="btn btn-gold" id="openInvitation">
+        <i class="bi bi-envelope-open me-2"></i>Buka Undangan
+    </button>
+    </div>
+</section>
+
+<!-- MUSIK OPSIONAL: simpan gamelan milik sendiri di assets/music.mp3 -->
+<audio id="weddingMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+<button id="musicToggle" class="music-toggle" aria-label="Putar atau jeda musik gamelan">
+    <i class="bi bi-music-note"></i>
+</button>
+
+<!-- NAVBAR BOOTSTRAP -->
+<nav class="navbar navbar-expand-lg fixed-top wedding-nav" data-bs-theme="dark">
+    <div class="container">
+    <a class="navbar-brand" href="#home">R <span>&</span> A</a>
+    <button class="navbar-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Buka navigasi">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#couple">Mempelai</a></li>
+        <li class="nav-item"><a class="nav-link" href="#story">Kisah Kami</a></li>
+        <li class="nav-item"><a class="nav-link" href="#event">Acara</a></li>
+        <li class="nav-item"><a class="nav-link" href="#adat">Adat</a></li>
+        <li class="nav-item"><a class="nav-link" href="#rsvp">RSVP</a></li>
+        <li class="nav-item"><a class="nav-link" href="#wishes">Ucapan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gift">Hadiah</a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+
+<main>
+<!-- HERO -->
+<section id="home" class="hero">
+    <div class="container hero-content hero-seq text-center">
+        <p class="jawa-greet">Sugeng Rawuh</p>
+        <h1>Raka <span>&</span> Alya</h1>
+        <p class="hero-subtitle">Kalih manah, setunggal lampah, tansah rahayu.</p>
+        <p class="hero-date"><i class="bi bi-calendar-heart me-2"></i>Minggu, 20 Desember 2026</p>
+        <a href="#couple" class="btn btn-gold mt-3">Jelajahi Undangan <i class="bi bi-arrow-down ms-1"></i></a>
+    </div>
+</section>
+
+<!-- PEMBUKA -->
+<section class="section-pad intro text-center">
+    <div class="container narrow">
+        <div class="ornamen" aria-hidden="true"></div>
+        <h2 class="section-title">Rahayu, kanthi raos syukur</h2>
+        <p class="body-copy">
+        Assalamualaikum warahmatullahi wabarakatuh. Kanthi memuji asmaning
+        Gusti ingkang Maha Asih, kami bermaksud menyelenggarakan pernikahan
+        putra-putri kami. Merupakan kebahagiaan bagi kami apabila
+        Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.
+        </p>
+        <p class="arabic">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنْفُسِكُمْ أَزْوَاجًا</p>
+        <p class="small mb-0">QS. Ar-Rum: 21</p>
+    </div>
+</section>
+
+<!-- MEMPELAI -->
+<section id="couple" class="section-pad couple">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Kedua Mempelai</h2>
+        <div class="row justify-content-center align-items-center g-4">
+        <div class="col-md-5">
+            <article class="person-card text-center">
+            <img class="person-photo" src="assets/foto-pria.jpg" alt="Foto Alya Putri">
+            <h3>Raka Pratama</h3>
+            <p class="body-copy">Putri pertama dari<br>Bapak Ahmad dan Ibu Siti</p>
+            </article>
+        </div>
+        <div class="col-md-2 text-center couple-amp">&</div>
+        <div class="col-md-5">
+            <article class="person-card text-center">
+            <img class="person-photo" src="assets/foto-wanita.jpg" alt="Foto Raka Pratama">
+            <h3>Alya Putri</h3>
+            <p class="body-copy">Putra pertama dari<br>Bapak Budi dan Ibu Rina</p>
+            </article>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- KISAH CINTA -->
+<section id="story" class="section-pad story">
+    <div class="container narrow text-center">
+        <h2 class="section-title">Kisah Kami</h2>
+        <div class="story-timeline text-start">
+        <article class="story-item">
+            <span class="timeline-dot"></span>
+            <h3>2022 · Pertemuan</h3>
+            <p class="body-copy">Kami bertemu pertama kali di sebuah acara kampus. Obrolan singkat tentang
+            hal-hal sederhana ternyata terasa hangat dan mengalir begitu saja. Dari
+            situ, kami mulai saling menyapa, bertukar cerita, dan diam-diam menantikan
+            pertemuan berikutnya. Witing tresno jalaran saka kulina, cinta tumbuh
+            karena terbiasa bersama.</p>
+        </article>
+        <article class="story-item">
+            <span class="timeline-dot"></span>
+            <h3>2024 · Saling Mengenal</h3>
+            <p class="body-copy">Dua tahun berjalan, kami belajar memahami satu sama lain: kebiasaan,
+            impian, juga kekurangan. Ada jarak, kesibukan, dan perbedaan pendapat
+            yang kami lewati bersama dengan sabar. Di masa ini, kami yakin bahwa
+            kami ingin saling menjaga dan melangkah ke arah yang sama. Keluarga
+            kedua belah pihak pun mulai saling mengenal dan menyambut dengan hangat.</p>
+        </article>
+        <article class="story-item">
+            <span class="timeline-dot"></span>
+            <h3>2026 · Hari Bahagia</h3>
+            <p class="body-copy">Dengan restu kedua orang tua, kami memantapkan hati untuk membangun rumah
+            tangga. Lamaran berlangsung sederhana namun penuh doa, dan kini kami
+            siap memasuki babak baru. Kami memohon doa restu Bapak/Ibu/Saudara/i
+            agar pernikahan ini berjalan lancar dan menjadi keluarga yang sakinah,
+            mawaddah, warahmah.</p>
+        </article>
+        </div>
+    </div>
+</section>
+
+<!-- COUNTDOWN -->
+<section class="section-pad countdown-section text-center">
+    <div class="container">
+        <h2 class="section-title">Menuju Hari Bahagia</h2>
+        <div class="d-flex justify-content-center flex-wrap gap-3">
+        <div class="count-box"><strong id="days">00</strong><span>Dina</span></div>
+        <div class="count-box"><strong id="hours">00</strong><span>Jam</span></div>
+        <div class="count-box"><strong id="minutes">00</strong><span>Menit</span></div>
+        <div class="count-box"><strong id="seconds">00</strong><span>Detik</span></div>
+        </div>
+        <p id="countdownMessage" class="mt-4"></p>
+    </div>
+</section>
+
+<!-- DETAIL ACARA -->
+<section id="event" class="section-pad event">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Wiwit Acara</h2>
+        <div class="row justify-content-center g-4">
+        <div class="col-md-5">
+            <div class="event-card text-center">
+            <div class="event-icon"><i class="bi bi-heart"></i></div>
+            <h3>Akad Nikah</h3>
+            <p class="event-date">Minggu, 20 Desember 2026</p>
+            <p><i class="bi bi-clock me-2"></i>08.00–10.00 WIB</p>
+            <p><i class="bi bi-geo-alt me-2"></i>Jl. Rungkut Asri Utara I No.4, Kali Rungkut, Kec. Rungkut, Surabaya, Jawa Timur 60132</p>
+            <a class="btn btn-gold" target="_blank" rel="noopener"
+                href="https://maps.app.goo.gl/VRq37APbra9YTRSw5">
+                Lihat Lokasi <i class="bi bi-map ms-1"></i>
+            </a>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="event-card text-center">
+            <div class="event-icon"><i class="bi bi-people"></i></div>
+            <h3>Resepsi Panggih</h3>
+            <p class="event-date">Minggu, 20 Desember 2026</p>
+            <p><i class="bi bi-clock me-2"></i>11.00–14.00 WIB</p>
+            <p><i class="bi bi-geo-alt me-2"></i>Jl. Jawar Surabaya, Benowo, Kec. Pakal, Surabaya, Jawa Timur 60196</p>
+            <a class="btn btn-gold" target="_blank" rel="noopener"
+                href="https://maps.app.goo.gl/Tsc6QB5LPNQtk8b4A">
+                Lihat Lokasi <i class="bi bi-map ms-1"></i>
+            </a>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- RANGKAIAN ADAT -->
+<section id="adat" class="section-pad adat">
+    <div class="container">
+        <h2 class="section-title text-center mb-5">Rangkaian Adat</h2>
+        <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-3"><div class="adat-item"><h3>Siraman</h3><p>Mandi air kembang tujuh rupa, simbol membersihkan lahir dan batin.</p></div></div>
+        <div class="col-md-6 col-lg-3"><div class="adat-item"><h3>Midodareni</h3><p>Malam sebelum akad, dipercaya para bidadari turun memberi restu.</p></div></div>
+        <div class="col-md-6 col-lg-3"><div class="adat-item"><h3>Panggih</h3><p>Pertemuan pengantin dengan balangan gantal dan injak telur.</p></div></div>
+        <div class="col-md-6 col-lg-3"><div class="adat-item"><h3>Sungkeman</h3><p>Sujud kepada orang tua sebagai tanda bakti dan permohonan doa.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- RSVP -->
+<section id="rsvp" class="section-pad rsvp">
+    <div class="container">
+        <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <div class="form-card">
+            <div class="text-center mb-4">
+                <h2 class="section-title">Konfirmasi Kehadiran</h2>
+                <p class="body-copy">Kehadiran Anda akan menjadi kebahagiaan bagi kami. Mohon konfirmasi kehadiran melalui formulir berikut.</p>
+            </div>
+            <form id="rsvpForm">
+                <div class="mb-3">
+                <label class="form-label" for="guestName">Nama lengkap</label>
+                <input class="form-control" id="guestName" required maxlength="80" placeholder="Masukkan nama">
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="attendance">Kehadiran</label>
+                <select class="form-select" id="attendance" required>
+                    <option value="">Pilih konfirmasi</option>
+                    <option value="Hadir">Hadir</option>
+                    <option value="Tidak hadir">Tidak Hadir</option>
+                </select>
+                </div>
+                <div class="mb-3">
+                <label class="form-label" for="guestCount">Jumlah tamu</label>
+                <select class="form-select" id="guestCount">
+                    <option value="1">1 orang</option>
+                    <option value="2">2 orang</option>
+                    <option value="3">3 orang</option>
+                </select>
+                </div>
+                <button type="submit" class="btn btn-gold w-100">Kirim Kehadiran <i class="bi bi-send ms-2"></i></button>
+            </form>
+            <div id="rsvpResult" class="alert alert-success mt-3 d-none" role="status"></div>
+            <p class="form-note mt-3">Versi demo: data hanya tersimpan di browser yang digunakan.</p>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- BUKU TAMU -->
+<section id="wishes" class="section-pad wishes">
+    <div class="container">
+        <div class="text-center mb-4">
+        <h2 class="section-title">Buku Tamu Digital</h2>
+        <p class="body-copy">Setiap doa dan ucapan baik dari Anda menjadi bagian indah dari awal perjalanan hidup kami.</p>
+        </div>
+        <div class="row justify-content-center">
+        <div class="col-lg-7">
+            <form id="wishForm" class="wish-form">
+            <div class="mb-3">
+                <label class="form-label" for="wishName">Nama</label>
+                <input class="form-control" id="wishName" required maxlength="80" placeholder="Nama Anda">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="wishText">Ucapan</label>
+                <textarea class="form-control" id="wishText" rows="3" required maxlength="500" placeholder="Tuliskan ucapan dan doa..."></textarea>
+            </div>
+            <button class="btn btn-outline-gold" type="submit">Kirim Ucapan <i class="bi bi-chat-heart ms-1"></i></button>
+            </form>
+            <div id="wishList" class="wish-list mt-4" aria-live="polite"></div>
+        </div>
+        </div>
+    </div>
+</section>
+
+<!-- HADIAH -->
+<section id="gift" class="section-pad gift text-center">
+    <div class="container narrow">
+        <h2 class="section-title">Hadiah</h2>
+        <p class="body-copy">Doa restu Anda merupakan hadiah terindah bagi kami. Apabila ingin berbagi tanda kasih, berikut informasi rekening yang dapat digunakan.</p>
+        <div class="gift-card">
+        <img class="bank-logo" src="assets/logo-bank.jpg" alt="Logo Bank BRI" onerror="this.style.display='none'">
+        <p class="mb-1">Bank BRI</p>
+        <h3 id="accountNumber">626301023126538</h3>
+        <p class="small">Muhammad Baried Isom Husnudin</p>
+        <button class="btn btn-outline-gold btn-sm" id="copyAccount">
+            <i class="bi bi-copy me-1"></i>Salin Nomor
+        </button>
+        <p id="copyMessage" class="copy-message" aria-live="polite"></p>
+        </div>
+    </div>
+</section>
+
+<footer class="footer text-center">
+    <div class="container">
+    <p class="aksara" aria-hidden="true">ꦩꦠꦸꦂꦤꦸꦮꦸꦤ꧀</p>
+    <p>Terima kasih atas doa, kasih sayang, dan restu yang diberikan kepada kami. Semoga setiap kebaikan dibalas dengan keberkahan.</p>
+    <h2>Raka <span>&</span> Alya</h2>
+    <p class="footer-date">20 · 12 · 2026</p>
+    <small>© 2026 Undangan Pernikahan Digital</small>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
