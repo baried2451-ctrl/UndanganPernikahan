@@ -77,4 +77,6 @@ Agar tersimpan terpusat:
 
 ## Pembuat
 
-Nama Kamu · NIM · Mata Kuliah PBP
+Muhammad Baried Isom Husnudin
+25051204230
+TI 2025 E
